@@ -1,0 +1,16 @@
+manifest_version: 1
+name: web-specstream
+version: 1.0.0
+requires_hermes: ">=0.20.0"
+description: "SpecStream web search and page extraction for web_search and web_extract: the Search API ($5 per 1,000 searches) and the Extract API ($0.80 per 1,000 pages, a page with no text is free). Requires a SpecStream API key."
+author: SpecStream
+kind: backend
+provides_web_providers:
+  - specstream
+provides_tools: []
+provides_hooks: []
+requires_env:
+  - name: SPECSTREAM_API_KEY
+    description: "SpecStream API key (new accounts get $10 of credit, no card; search is $5 per 1,000, extract $0.80 per 1,000 pages)"
+    url: "https://specstream.ai/workspace"
+    secret: true
